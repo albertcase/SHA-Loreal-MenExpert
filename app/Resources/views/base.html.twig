@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Test Application{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <!--禁用手机号码链接(for iPhone)-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0,minimal-ui" />
+        <!--自适应设备宽度-->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!--控制全屏时顶部状态栏的外，默认白色-->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="Keywords" content="">
+        <meta name="Description" content="...">
+        {% block head_style %}
+        {% endblock %}
+        {% block head_scripts %}
+        {% endblock %}
+
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?6d4becb16a5fa81e7224c3bcc7e1f333";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="loading_con">
+                <img src="/images/nav_bg.png" width="100%">
+                <p><span>0</span>%</p>
+            </div>
+            <img src="/images/loadingbg.jpg" height="100%" width="100%">
+        </div>
+        <div id="navLevel" class="page-prev">
+            <ul class="menu">
+                <li>
+                    <a href="/fondation/chapter1" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', '起航']);" title="CHAPTER1 起航"><img src="/images/n-1.png" width="100%"></a>
+                </li>
+                <li>
+                    <a href="/fondation/chapter2" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', '梦想之旅']);" title="CHAPTER2 梦想之旅"><img src="/images/n-2.png" width="100%"></a>
+                </li>
+                <li>
+                    <a href="/fondation/chapter3" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', '立梦建筑']);" title="CHAPTER3 立梦建筑"><img src="/images/n-3.png" width="100%"></a>
+                </li>
+                <li>
+                    <a href="/fondation/chapter4" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', '创梦当代']);" title="CHAPTER4 创梦当代"><img src="/images/n-4.png" width="100%"></a>
+                </li>
+                <li>
+                    <a href="/fondation/invitation" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', '获取北京特展邀请函']);" title="获取北京特展邀请函"><img src="/images/n-5.png" width="100%"></a>
+                </li>
+                <li>
+                    <a href="/fondation/ugc" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', '开启你的梦想之旅']);" title="开启你的梦想之旅"><img src="/images/n-6.png" width="100%"></a>
+                </li>
+                <li>
+                    <a href="/fondation/guidetour" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', '语音导览']);" title="语音导览"><img src="/images/n-7.png" width="100%"></a>
+                </li>
+            </ul>
+
+            <div class="navLevel_footer">
+                <div class="nav-slogan">
+                    <p>
+                        <a href="http://www.fondationlouisvuitton.fr/" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '下拉导航', 'FLV官网']);" target="_blank"><img src="/images/menu-slogan.png" /></a>
+                    </p>   
+                </div>
+                <a class="close" href="javascript:;">
+                    <img src="/images/close.png" width="100%">
+                    关 闭 
+                </a>
+            </div>
+        </div>
+        <div class="head">
+            <img src="/images/nav_bg.png" onclick="_hmt.push(['_trackEvent', 'btn', 'click', '菜单按钮']);" class="nav-bg" />
+            <a href="javascript:;" class="nav_icon">
+                <img src="/images/nav_icon.png" />
+            </a>
+            <img src="/images/menu-bg.png" height="100%" width="100%" />
+        </div>
+
+        <div id="dreambox">
+            {% block dreambox %}
+            {% endblock %}
+        </div>
+        <div id="orientLayer" class="mod-orient-layer">
+            <div class="mod-orient-layer__content">
+                <i class="icon mod-orient-layer__icon-orient"></i>
+                <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+            </div>
+        </div>
+    </body>
+</html>
