@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+{% block title %}路易威登基金会{% endblock %}
+{% block head_style %}
+{% stylesheets filter='cssrewrite' output="css/chapter.css"
+	'%kernel.root_dir%/Resources/public/css/*'
+
+%}
+<link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}
+{% block head_scripts %}
+{% javascripts output="js/chapter.js"
+    '%kernel.root_dir%/Resources/public/js/*'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% endblock %}
