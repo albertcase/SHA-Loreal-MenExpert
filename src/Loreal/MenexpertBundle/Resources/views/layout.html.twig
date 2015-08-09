@@ -1,16 +1,19 @@
 {% extends '::base.html.twig' %}
-{% block title %}路易威登基金会{% endblock %}
+{% block title %}欧莱雅中国{% endblock %}
 {% block head_style %}
-{% stylesheets filter='cssrewrite' output="css/chapter.css"
-	'%kernel.root_dir%/Resources/public/css/*'
-
+{% stylesheets filter='cssrewrite' output="css/spring.css"
+    'bundles/lorealmenexpert/css/reset.css'
+    'bundles/lorealmenexpert/css/main.css' 
+	
+    
 %}
 <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
 {% endstylesheets %}
 {% endblock %}
 {% block head_scripts %}
-{% javascripts output="js/chapter.js"
-    '%kernel.root_dir%/Resources/public/js/*'
+{% javascripts output="js/spring.js"
+    '@LorealMenexpertBundle/Resources/public/js/jquery.js'
+    
 %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
