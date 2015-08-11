@@ -25,4 +25,9 @@ class InvitationController extends Controller
     {
         return $this->render('LorealMenexpertBundle:Invatation:main.html.twig');
     }
+    
+    public function interactionAction()
+    {
+        return $this->render('LorealMenexpertBundle:Invatation:interaction.html.twig');
+    }
 }
