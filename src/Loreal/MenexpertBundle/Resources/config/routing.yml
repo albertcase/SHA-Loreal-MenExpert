@@ -17,3 +17,7 @@ loreal_menexpert_success:
 loreal_menexpert_main:
     path:     /interaction/main
     defaults: { _controller: LorealMenexpertBundle:Interaction:main }
+
+loreal_menexpert_interaction:
+    path:     /interaction/interaction
+    defaults: { _controller: LorealMenexpertBundle:Interaction:interaction }

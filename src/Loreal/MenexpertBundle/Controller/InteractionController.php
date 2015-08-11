@@ -25,4 +25,8 @@ class InteractionController extends Controller
     {
         return $this->render('LorealMenexpertBundle:Interaction:main.html.twig');
     }
+    public function interactionAction()
+    {
+        return $this->render('LorealMenexpertBundle:Interaction:interaction.html.twig');
+    }
 }
