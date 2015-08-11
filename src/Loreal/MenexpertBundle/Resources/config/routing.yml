@@ -2,6 +2,10 @@ loreal_menexpert_homepage:
     path:     /interaction
     defaults: { _controller: LorealMenexpertBundle:Interaction:index }
 
+loreal_menexpert_index:
+    path:     /interaction/index
+    defaults: { _controller: LorealMenexpertBundle:Interaction:index }
+
 loreal_menexpert_error:
     path:     /interaction/error
     defaults: { _controller: LorealMenexpertBundle:Interaction:error }
@@ -13,3 +17,7 @@ loreal_menexpert_success:
 loreal_menexpert_main:
     path:     /interaction/main
     defaults: { _controller: LorealMenexpertBundle:Interaction:main }
+
+loreal_menexpert_interaction:
+    path:     /interaction/interaction
+    defaults: { _controller: LorealMenexpertBundle:Interaction:interaction }

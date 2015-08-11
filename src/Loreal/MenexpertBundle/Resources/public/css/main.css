@@ -1,0 +1,294 @@
+html{
+    width:100%;
+    height:100%;
+    position: relative;
+    overflow: hidden;
+    font-size: 65%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+@-webkit-keyframes rotation {
+  10% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg)
+  }
+
+  50%, 60% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg)
+  }
+
+  90% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg)
+  }
+
+  100% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg)
+  }
+}
+
+@keyframes rotation {
+  10% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg)
+  }
+
+  50%, 60% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg)
+  }
+
+  90% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg)
+  }
+
+  100% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg)
+  }
+}
+
+#orientLayer {
+  display: none;
+}
+
+@media screen and (min-aspect-ratio: 13/9) {
+  #orientLayer {
+    display: block;
+  }
+}
+
+.mod-orient-layer {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 9997
+}
+
+.mod-orient-layer__content {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  margin-top: -75px;
+  text-align: center
+}
+
+.mod-orient-layer__icon-orient {
+  background-image: url('/images/heng.png');
+  display: inline-block;
+  width: 67px;
+  height: 109px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -webkit-animation: rotation infinite 1.5s ease-in-out;
+  animation: rotation infinite 1.5s ease-in-out;
+  -webkit-background-size: 67px;
+  background-size: 67px
+}
+
+.mod-orient-layer__desc {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #fff
+}
+
+/* index */
+.index,.error,.main,.success{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background:url('/images/bg.jpg') no-repeat;
+    background-size: 100% 100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.logo{
+  position: relative;
+  width:50%;
+  margin:20% 0 0 25%;
+}
+.kv{
+  position: absolute;
+  width:70%;
+  bottom:4%;
+  left:15%;
+}
+.btn{
+  width:30%;
+  position:relative;
+  margin:2% 0 0 35%;
+}
+.form ul{
+  width:100%;
+  position: relative;
+  margin:10% 0 0 16%;
+}
+.form ul li{
+  width:100%;
+  margin:0 0 4% 0;
+  line-height:30px;
+  height:30px;
+}
+.form ul li img {
+  width:14%;
+}
+.form ul li input {
+  width:56%;
+  background: url('/images/index/line.png') no-repeat bottom;
+  background-size: 100%;
+  line-height:30px;
+  height:30px;
+  color:#ec680c;
+  font-size: 2.2em;
+  text-transform: lowercase;
+  padding: 0 2em;
+}
+
+/* regret */
+.back{
+  width:50%;
+  margin: 10% 0 0 25%;
+}
+.ball{
+  width:20%;
+  margin:0 0 0 40%;
+  animation:round 2s linear infinite;
+  -webkit-animation:round 2s linear infinite;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes round{
+  0%{opacity: 1;transform:rotate(360deg)}
+  50%{opacity: 0.5;transform:rotate(0deg)}
+  100{opacity: 1;transform:rotate(360deg)}
+}
+@-webkit-keyframes round{
+  0%{opacity: 1; -webkit-transform:rotate(360deg)}
+  50%{opacity: 0.5; -webkit-transform:rotate(0deg)}
+  100{opacity: 1; -webkit-transform:rotate(360deg)}
+}
+
+/* main */
+.address{
+  width:54%;
+  margin: 10% 0 0 23%;
+}
+.router_btn{
+  padding: 2em 0 1em 0;
+}
+
+/* success */
+.map{
+  width:70%;
+  margin: 2% 0 2% 15%;
+}
+.pr{
+  width:60%;
+  margin: 2% 0 0 20%;
+}
+.pr_title{
+  margin: 4% 0;
+}
+.pr_tel{
+  width:84%;
+  margin:0 0 0 8%;
+}
+
+/* interaction */
+.interaction{
+  width:100%;
+  height:100%;
+  background: url("/images/interation/bg.jpg") no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+.inter_logo{
+  position: relative;
+  width:50%;
+  margin:4% 0 0 25%;
+}
+
+/* purple */
+.purple{
+  width:36%;
+  position: absolute;
+  top:20%;
+  left:2%;
+}
+.circle_ani_purple{
+  width:40%;
+  position: relative;
+  margin: -20% 0 0 50%;
+}
+.circle{
+  animation:circle_animation 2s linear infinite;
+  -webkit-animation:circle_animation 2s linear infinite;
+}
+@keyframes circle_animation{
+  100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes circle_animation{
+  100%{-webkit-transform:rotate(360deg)}
+}
+.circle_on{
+  position: relative;
+  margin:-120% 0 0 0; 
+}
+.circle_title{
+  width:200%;
+  position: relative;
+  margin: 0 0 0 -50%;
+}
+/* red */
+.red{
+  width:36%;
+  position: absolute;
+  top:22%;
+  right:-1%;
+}
+.circle_ani_red{
+  width:40%;
+}
+.heater{
+  position: relative;
+  margin: -2% 0 0 0;
+}
+
+/* orange */
+.orange{
+  width:36%;
+  position: absolute;
+  top:40%;
+  left:30%;
+}
+.circle_ani_orange{
+  width:40%;
+  position: relative;
+  margin: -40% 0 0 90%;
+}
+/* orange */
+.green{
+  width:36%;
+  position: absolute;
+  top:60%;
+  left:0%;
+}
+.circle_ani_green{
+  width:40%;
+  position: relative;
+  margin: -40% 0 0 90%;
+}
+
