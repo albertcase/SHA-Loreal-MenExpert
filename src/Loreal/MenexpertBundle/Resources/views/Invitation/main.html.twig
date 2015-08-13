@@ -1,18 +1,26 @@
 {% extends "LorealMenexpertBundle::layout.html.twig" %}
-{% block title %}欧莱雅中国{% endblock %}
+{% block title %}巴黎欧莱雅{% endblock %}
 {% block body %}
 <div class="main">
 	<div class="logo">
 		<img src="/images/logo.png" width="100%" />
 	</div>
-	
 	<div class="address">
 		<img src="/images/main/address.png" width="100%" />
 	</div>
 	
-	<img src="/images/main/router_btn.png" width="100%" class="btn router_btn" />
-	<img src="/images/main/activity_btn.png" width="100%" class="btn activity_btn" />
+	<p>
+		<a href="success">
+			<img src="/images/main/router_btn.png" width="100%" class="btn router_btn" />
+		</a>
+	</p>	
+	<p>
+		<a href="interaction">	
+			<img src="/images/main/activity_btn.png" width="100%" class="btn activity_btn" />
+		</a>
+	</p>	
 
-
+	<img src="/images/index/kv.jpg" width="100%" class="kv_shadow" />
 </div>	
+
 {% endblock %}
