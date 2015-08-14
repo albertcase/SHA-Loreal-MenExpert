@@ -1,6 +1,9 @@
 
 ;(function($){
 	$(function(){
+
+		$(".main .tips").fadeIn(1000);
+		$(".main_tips").fadeIn(1000);
 	
 		$(".circle_ani_green").on("click",function(){
 			$(".tips").fadeIn();
