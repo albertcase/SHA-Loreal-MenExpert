@@ -2,13 +2,35 @@
 ;(function($){
 	$(function(){
 	
-		$(".green").on("click",function(){
+		$(".circle_ani_green").on("click",function(){
 			$(".tips").fadeIn();
-			console.log(1);
+			$(".green_tips").fadeIn();
+			
+		});
+		$(".circle_ani_red").on("click",function(){
+			$(".tips").fadeIn();
+			$(".red_tips").fadeIn();
+			
+		});
+		$(".circle_ani_purple").on("click",function(){
+			$(".tips").fadeIn();
+			$(".purple_tips").fadeIn();
+			
+		});
+		$(".circle_ani_orange").on("click",function(){
+			$(".tips").fadeIn();
+			$(".orange_tips").fadeIn();
+			
+		});
+		$(".circle_ani_blue").on("click",function(){
+			$(".tips").fadeIn();
+			$(".blue_tips").fadeIn();
+			
 		});
 		$(".close").on("click",function(){
-			console.log(0);
+			
 			$(".tips").fadeOut();
+			$(".tips_content").fadeOut();
 
 		});
 
