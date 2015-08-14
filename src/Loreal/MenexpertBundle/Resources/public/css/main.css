@@ -177,7 +177,7 @@ html{
 /* regret */
 .back{
   width:50%;
-  margin: 10% 0 0 25%;
+  margin: 20% 0 0 25%;
 }
 .ball{
   width:20%;
@@ -406,7 +406,7 @@ html{
 .tips_logo{
   position: absolute;
   width:30%;
-  bottom:5%;
+  bottom:15%;
   left:35%;
 }
 
