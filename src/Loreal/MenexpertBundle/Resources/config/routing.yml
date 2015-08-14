@@ -22,10 +22,50 @@ loreal_menexpert_interaction:
     path:     /invitation/interaction
     defaults: { _controller: LorealMenexpertBundle:Invitation:interaction }
 
-loreal_menexpert_interactionhome:
-    path:     /interaction
-    defaults: { _controller: LorealMenexpertBundle:Interaction:index }
-
 loreal_menexpert_api_check:
     path:     /api/check
     defaults: { _controller: LorealMenexpertBundle:Api:check }
+
+loreal_menexpert_interaction_homepage:
+    path:     /interaction
+    defaults: { _controller: LorealMenexpertBundle:Interaction:index }
+
+loreal_menexpert_interaction_index:
+    path:     /interaction/index
+    defaults: { _controller: LorealMenexpertBundle:Interaction:index }
+
+loreal_menexpert_interaction_choose:
+    path:     /interaction/choose
+    defaults: { _controller: LorealMenexpertBundle:Interaction:choose }
+
+loreal_menexpert_interaction_photolist:
+    path:     /interaction/photolist
+    defaults: { _controller: LorealMenexpertBundle:Interaction:photolist }
+
+loreal_menexpert_interaction_map:
+    path:     /interaction/map
+    defaults: { _controller: LorealMenexpertBundle:Interaction:map }
+
+loreal_menexpert_interaction_red:
+    path:     /interaction/red
+    defaults: { _controller: LorealMenexpertBundle:Interaction:red }
+
+loreal_menexpert_interaction_orange:
+    path:     /interaction/orange
+    defaults: { _controller: LorealMenexpertBundle:Interaction:orange }
+
+loreal_menexpert_interaction_blue:
+    path:     /interaction/blue
+    defaults: { _controller: LorealMenexpertBundle:Interaction:blue }
+
+loreal_menexpert_interaction_purple:
+    path:     /interaction/purple
+    defaults: { _controller: LorealMenexpertBundle:Interaction:purple }
+
+loreal_menexpert_interaction_green:
+    path:     /interaction/green
+    defaults: { _controller: LorealMenexpertBundle:Interaction:green }
+
+loreal_menexpert_interaction_result:
+    path:     /interaction/result
+    defaults: { _controller: LorealMenexpertBundle:Interaction:result }
