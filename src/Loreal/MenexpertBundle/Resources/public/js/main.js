@@ -41,9 +41,12 @@
 
 		
 
-		$(".round").addClass("index_ani").animate({opacity:"1"},100,function(){
-			window.location.href="";
-		});
+		$(".round").addClass("index_ani");
+
+		if ($('.round').hasClass('index_ani')){
+			setTimeout(function(){window.location.href="choose";},3000);
+			
+		}
 
 		
 	
