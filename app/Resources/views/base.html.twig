@@ -17,14 +17,16 @@
         {% block head_scripts %}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}
-        {% endblock %}
+    <body> 
+        <img src="/images/kv.jpg" class="shareimg" />
         <div id="orientLayer" class="mod-orient-layer">
             <div class="mod-orient-layer__content">
                 <i class="icon mod-orient-layer__icon-orient"></i>
                 <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
             </div>
         </div>
+        {% block body %}
+        {% endblock %}
+
     </body>
 </html>

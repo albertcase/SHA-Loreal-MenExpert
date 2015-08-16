@@ -1,38 +1,34 @@
 {% extends "LorealMenexpertBundle::layout.html.twig" %}
 {% block title %}巴黎欧莱雅{% endblock %}
 {% block body %}
-<div class="main">
+<div class="success">
 	<div class="logo">
 		<img src="/images/logo.png" width="100%" />
 	</div>
-	<div class="address">
-		<img src="/images/main/address.png" width="100%" />
+	<div class="map">
+		<img src="/images/router/map.png" width="100%" />
+		<div class="pr">
+			<img src="/images/router/team.png" width="100%" class="pr_title"/>
+			<a href="tel:13816210681">
+				<img src="/images/router/tel1.png" width="100%" class="pr_tel"/>
+			</a>
+			<a href="tel:13917945650">	
+				<img src="/images/router/tel2.png" width="100%" class="pr_tel"/>
+			</a>
+			<img src="/images/router/pr.png" width="100%" class="pr_title"/>
+			<a href="tel:13436855250">	
+				<img src="/images/router/tel3.png" width="100%" class="pr_tel"/>
+			</a>
+			<a href="tel:13439900703">		
+				<img src="/images/router/tel4.png" width="100%" class="pr_tel"/>
+			</a>	
+		</div>
 	</div>
-	
-	<p>
-		<a href="success">
-			<img src="/images/main/router_btn.png" width="100%" class="btn router_btn" />
-		</a>
-	</p>	
-	<p>
-		<a href="interaction">	
-			<img src="/images/main/activity_btn.png" width="100%" class="btn activity_btn" />
-		</a>
-	</p>	
+	<a href="interaction">
+		<img src="/images/main/activity_btn.png" width="100%" class="btn activity_btn" />
+	</a>	
+	<img src="/images/index/kv.jpg" width="100%" class="kv_shadow" />	
 
-	<img src="/images/index/kv.jpg" width="100%" class="kv_shadow" />
 
-	<div class="tips">
-  		<img src="/images/interation/tipsBox.png" class="tips_box">
-		
-		<img src="/images/interation/close_btn.png" width="100%" class="close"/>
-		
-		<div class="tips_content main_tips">	
-			<img src="/images/main/main_tips.png" class="save" />
-			<img src="/images/interation/tipsLogo.png" class="tips_logo">
-		</div>	
-		
-	</div>	
 </div>	
-
 {% endblock %}

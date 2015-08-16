@@ -1,1 +1,25 @@
-result
+{% extends "LorealMenexpertBundle::layout.html.twig" %}
+{% block title %}巴黎欧莱雅{% endblock %}
+{% block body %}
+<div class="result">
+	<div class="logo">
+		<img src="/images/logo.png" width="100%" />
+	</div>
+	<div class="last_title">
+	    <img src="/images/game/last_title.png" width="100%"/>
+	</div>	
+	<a href="./photolist">
+		<img src="/images/sec_index/photo_btn.png" width="100%" class="btn" />
+	</a>	
+		
+	<div class="kv_noshadow">
+		<img src="/images/index/kv.jpg" width="100%" />
+	</div>	
+</div>
+
+<!--<script>
+var w=$(document).width();
+var h=$(document).height();
+alert(w+"/"+h);
+</script>	-->
+{% endblock %}

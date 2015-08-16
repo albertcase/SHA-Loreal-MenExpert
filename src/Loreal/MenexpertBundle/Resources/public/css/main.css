@@ -10,6 +10,17 @@ html{
     margin: 0;
     padding: 0;
 }
+
+.shareimg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 @-webkit-keyframes rotation {
   10% {
     transform: rotate(90deg);
@@ -120,6 +131,7 @@ html{
   position: relative;
   width:50%;
   margin:20% 0 0 25%;
+  z-index:10;
 }
 .kv{
   position: relative;
@@ -203,6 +215,7 @@ html{
   position: relative;
   width:50%;
   margin:16% 0 0 25%;
+  z-index:10;
 }
 .address{
   width:54%;
@@ -426,13 +439,73 @@ html{
   width:100%;
   height:100%;
   position:absolute;
-  background: #000 url("/images/sec_index/bg.jpg") no-repeat;
-  background-size: 100%;
+  background: url("/images/sec_index/bg.jpg") no-repeat;
+  background-size: 100% 100%;
   top:0;
   left:0;
   overflow: hidden;
   text-align: center;
+}
+.zoom{
+  width: 100%;
+}
+.round{
+  width:100%;
+  position: absolute;
+  top:20%;
+  left:0%;
+  z-index:0;
+  /*animation: zoom 1.5s 2 linear;
+  -webkit-animation: zoom 1.5s 2 linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;*/
+}
+.index_ani{
+  animation: zoom 1.5s 2 linear;
+  -webkit-animation: zoom 1.5s 2 linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes zoom{
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1.2); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@-webkit-keyframes zoom{
+  0% { -webkit-transform: scale(1); }
+  25% { -webkit-transform: scale(1.1); }
+  50% { -webkit-transform: scale(1.2); }
+  75% { -webkit-transform: scale(1.1); }
+  100% { -webkit-transform: scale(1); }
+}
 
+.human{
+  width:100%;
+  position: absolute;
+  top:20%;
+  left:0%;
+  z-index:100;
+}
+
+
+/* result */
+.result{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background:url('/images/bg.jpg') no-repeat;
+    background-size: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    text-align: center;
+}
+.last_title{
+  width:70%;
+  position: relative;
+  margin:10% 0 10% 15%;
 }
 
 

@@ -36,6 +36,18 @@
 			$(".tips_content").fadeOut();
 
 		});
+		
+
+
+		
+
+		$(".round").addClass("index_ani").animate({opacity:"1"},100,function(){
+			window.location.href="";
+		});
+
+		
+	
+
 
 
 	})
