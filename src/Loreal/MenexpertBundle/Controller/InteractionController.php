@@ -28,7 +28,7 @@ class InteractionController extends Controller
 
     public function redAction()
     {
-        return $this->render('LorealMenexpertBundle:Interaction:question.html.twig');
+        return $this->render('LorealMenexpertBundle:Interaction:red.html.twig');
     }
 
     public function blueAction()

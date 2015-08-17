@@ -269,35 +269,48 @@ html{
   background-size: 100%;
   overflow: hidden;
 }
+.hudong_logo{
+  position: relative;
+  width:60%;
+  margin: 4% 0 0 20%;
+}
 .inter_logo{
   position: relative;
   width:50%;
-  height:17%;
-  background-image: url("/images/interation/logo.png");
-  background-size: 100%;
+  height:6%;
+  background-image: url("/images/interation/logo1.png");
+  background-size: 100% 100%;
   margin:4% 0 0 25%;
-  animation: logo_ani 600ms linear 3;
-  -webkit-animation: logo_ani 600ms linear 3;
+  animation: logo_ani 2s linear infinite;
+  -webkit-animation: logo_ani 2s linear infinite;
 }
 @keyframes logo_ani{
-  0%{ background-image: url("/images/interation/logo1.png"); background-size:100%;}
-  14.3%{ background-image: url("/images/interation/logo2.png"); background-size:100%;}
-  28.6%{ background-image: url("/images/interation/logo3.png"); background-size:100%; }
-  42.9%{ background-image: url("/images/interation/logo4.png"); background-size:100%; }
-  57.1%{ background-image: url("/images/interation/logo5.png"); background-size:100%; }
-  71.4%{ background-image: url("/images/interation/logo6.png"); background-size:100%; }
-  85.7%{ background-image: url("/images/interation/logo7.png"); background-size:100%; }
-  100%{ background-image: url("/images/interation/logo8.png"); background-size:100%; }
+  0%{ background-image: url("/images/interation/logo1.png"); background-size:100% 100%;}
+  9.1%{ background-image: url("/images/interation/logo2.png"); background-size:100% 100%;}
+  18.2%{ background-image: url("/images/interation/logo3.png"); background-size:100% 100%; }
+  27.3%{ background-image: url("/images/interation/logo4.png"); background-size:100% 100%; }
+  36.4%{ background-image: url("/images/interation/logo5.png"); background-size:100% 100%; }
+  45.5%{ background-image: url("/images/interation/logo6.png"); background-size:100% 100%; }
+  54.5%{ background-image: url("/images/interation/logo7.png"); background-size:100% 100%; }
+  63.6%{ background-image: url("/images/interation/logo8.png"); background-size:100% 100%; }
+  72.7%{ background-image: url("/images/interation/logo9.png"); background-size:100% 100%; }
+  81.8%{ background-image: url("/images/interation/logo10.png"); background-size:100% 100%; }
+  90.9%{ background-image: url("/images/interation/logo11.png"); background-size:100% 100%; }
+  100%{ background-image: url("/images/interation/logo12.png"); background-size:100% 100%; }  
 }
 @-webkit-keyframes logo_ani{
-  0%{ background-image: url("/images/interation/logo1.png"); background-size:100%;}
-  14.3%{ background-image: url("/images/interation/logo2.png"); background-size:100%;}
-  28.6%{ background-image: url("/images/interation/logo3.png"); background-size:100%; }
-  42.9%{ background-image: url("/images/interation/logo4.png"); background-size:100%; }
-  57.1%{ background-image: url("/images/interation/logo5.png"); background-size:100%; }
-  71.4%{ background-image: url("/images/interation/logo6.png"); background-size:100%; }
-  85.7%{ background-image: url("/images/interation/logo7.png"); background-size:100%; }
-  100%{ background-image: url("/images/interation/logo8.png"); background-size:100%; }  
+  0%{ background-image: url("/images/interation/logo1.png"); background-size:100% 100%;}
+  9.1%{ background-image: url("/images/interation/logo2.png"); background-size:100% 100%;}
+  18.2%{ background-image: url("/images/interation/logo3.png"); background-size:100% 100%; }
+  27.3%{ background-image: url("/images/interation/logo4.png"); background-size:100% 100%; }
+  36.4%{ background-image: url("/images/interation/logo5.png"); background-size:100% 100%; }
+  45.5%{ background-image: url("/images/interation/logo6.png"); background-size:100% 100%; }
+  54.5%{ background-image: url("/images/interation/logo7.png"); background-size:100% 100%; }
+  63.6%{ background-image: url("/images/interation/logo8.png"); background-size:100% 100%; }
+  72.7%{ background-image: url("/images/interation/logo9.png"); background-size:100% 100%; }
+  81.8%{ background-image: url("/images/interation/logo10.png"); background-size:100% 100%; }
+  90.9%{ background-image: url("/images/interation/logo11.png"); background-size:100% 100%; }
+  100%{ background-image: url("/images/interation/logo12.png"); background-size:100% 100%; }  
 }
 
 
@@ -458,7 +471,8 @@ html{
 .tips_con{
   width:90%;
   height:24%;
-  overflow-y:scroll; 
+  overflow:hidden;
+  overflow-y:scroll;
   margin: 10% 0 0 5%;
   padding: 0 4px 0 0;
 }
@@ -589,6 +603,22 @@ html{
   bottom:15%;
 }
 
+/* game -orange */
+.orange_game{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background:url('/images/map/bg_orange.jpg') no-repeat;
+  background-size: 100% 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  text-align: center;
+}
+.logo_small{
+
+}
+
 
 @media only screen and (min-width:320px) and (max-height:416px) {
 
@@ -639,7 +669,7 @@ html{
   }
   
   .inter_logo{
-    height:21%;
+    height:8%;
   }
 
 
@@ -678,5 +708,8 @@ html{
   }
   .main .tips{
     top:28%;
+  }
+  .inter_logo{
+    height:8%;
   }
 }
