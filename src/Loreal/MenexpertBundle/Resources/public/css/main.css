@@ -570,6 +570,7 @@ html{
 
 
 @media only screen and (min-width:320px) and (max-height:416px) {
+
   .logo{
     width:48%;
     margin:12% 0 0 26%;
@@ -615,6 +616,10 @@ html{
     top: 10%;
     left:15%;
   }
+  .inter_logo{
+    height:21%;
+  }
+
 
 }
 @media only screen and (min-width:360px) and (max-width:384px) and (max-height:519px) {
