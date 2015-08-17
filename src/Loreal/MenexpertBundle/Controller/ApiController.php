@@ -22,6 +22,10 @@ class ApiController extends Controller
 	        $response->setData($status);
 	        return $response;
 		}
+
+		$session = $this->getRequest()->getSession();
+      	$session->set('menexpert_user', $request->get('name'));
+
 		$url = $this->generateUrl('loreal_menexpert_success');
 		$status = array('status' => '1', 'url' => $url);
         $response = new JsonResponse();
