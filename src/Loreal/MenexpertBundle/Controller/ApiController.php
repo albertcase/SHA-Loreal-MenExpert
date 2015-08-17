@@ -4,7 +4,7 @@ namespace Loreal\MenexpertBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use LV\Bundle\CvdBundle\Entity\Locks;
+use Loreal\MenexpertBundle\Entity\Vip;
 
 class ApiController extends Controller
 {
@@ -32,5 +32,29 @@ class ApiController extends Controller
         $response->setData($status);
         return $response;
 
+    }
+
+    public function insertAction()
+    {
+    	$handle = fopen ("files/loreal.txt", "r");
+        $ln= 0;
+        while (!feof($handle)) {
+            $line = fgets($handle, 4096);  
+            $lineary = explode(',', $line);
+            if(count($lineary) == 2){
+                $name = str_replace(array("\r\n", "\r", "\n"), "", trim($lineary[0]));
+                $mobile = str_replace(array("\r\n", "\r", "\n"), "", trim($lineary[1]));
+                $vip = new Vip();
+                $vip->setName($name);
+                $vip->setMobile($mobile);
+                $vip->setCreated(time());
+		        $doctrine = $this->getDoctrine()->getManager();
+		        $doctrine->persist($vip);
+		        $doctrine->flush();
+                $ln++;
+            }    
+        }
+        fclose($handle);
+        echo $ln;exit;
     }
 }
