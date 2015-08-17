@@ -19,7 +19,7 @@ class InvitationController extends Controller
     public function successAction()
     {
         if (!$this->getRequest()->getSession()->get('menexpert_user')) {
-           $this->redirect($this->generateUrl('loreal_menexpert_homepage'));
+           return $this->redirect($this->generateUrl('loreal_menexpert_homepage'));
         }
         return $this->render('LorealMenexpertBundle:Invitation:success.html.twig');
     }
@@ -27,7 +27,7 @@ class InvitationController extends Controller
     public function mainAction()
     {
         if (!$this->getRequest()->getSession()->get('menexpert_user')) {
-           $this->redirect($this->generateUrl('loreal_menexpert_homepage'));
+           return $this->redirect($this->generateUrl('loreal_menexpert_homepage'));
         }
         return $this->render('LorealMenexpertBundle:Invitation:main.html.twig');
     }
@@ -35,7 +35,7 @@ class InvitationController extends Controller
     public function interactionAction()
     {
         if (!$this->getRequest()->getSession()->get('menexpert_user')) {
-           $this->redirect($this->generateUrl('loreal_menexpert_homepage'));
+           return $this->redirect($this->generateUrl('loreal_menexpert_homepage'));
         }
         return $this->render('LorealMenexpertBundle:Invitation:interaction.html.twig');
     }
