@@ -231,6 +231,9 @@ html{
   position: relative;
   margin: 25% 0 0 0;
 }
+.main .tips{
+  top: 25%;  
+}
 
 /* success */
 .map{
@@ -273,8 +276,8 @@ html{
   background-image: url("/images/interation/logo.png");
   background-size: 100%;
   margin:4% 0 0 25%;
-  animation: logo_ani 1.5s linear 2;
-  -webkit-animation: logo_ani 1.5s linear 2;
+  animation: logo_ani 600ms linear 2;
+  -webkit-animation: logo_ani 600ms linear 2;
 }
 @keyframes logo_ani{
   0%{ background-image: url("/images/interation/logo1.png"); background-size:100%;}
@@ -296,11 +299,7 @@ html{
   85.7%{ background-image: url("/images/interation/logo7.png"); background-size:100%; }
   100%{ background-image: url("/images/interation/logo8.png"); background-size:100%; }  
 }
-/*.mask{
-  position: absolute;
-  width:100%;
-  top:0;
-}*/
+
 
 /* purple */
 .purple{
@@ -469,6 +468,27 @@ html{
   left:35%;
 }
 
+/*::-webkit-scrollbar {
+      width: 15px;
+  } 
+
+
+::-webkit-scrollbar-track {
+    background-color: #b46868;
+} 
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+::-webkit-scrollbar-button {
+    background-color: #7c2929;
+} 
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+} */
+
 /* loading */
 .loading{
   width:100%;
@@ -616,11 +636,12 @@ html{
     width:30%;
   }
   .tips {
-    width:70%;
-    height:70%;
+    width:64%;
+    height:64%;
     top: 10%;
-    left:15%;
+    left:18%;
   }
+  
   .inter_logo{
     height:21%;
   }
@@ -654,9 +675,12 @@ html{
     margin: 2% 0 2% 20%;
   }
   .tips {
-    width:70%;
-    height:70%;
+    width:64%;
+    height:64%;
     top: 10%;
-    left:15%;
+    left:18%;
+  }
+  .main .tips{
+    top:28%;
   }
 }
