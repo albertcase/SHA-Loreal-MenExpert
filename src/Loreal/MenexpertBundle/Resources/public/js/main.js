@@ -4,30 +4,32 @@
 
 		$(".main .tips").fadeIn(1000);
 		$(".main_tips").fadeIn(1000);
+		$(".map_area .tips").fadeIn(1000);
+		$(".map_tips").fadeIn(1000);
 	
-		$(".circle_ani_green").on("click",function(){
-			$(".tips").fadeIn();
-			$(".green_tips").fadeIn();
+		$(".interaction .circle_ani_green").on("click",function(){
+			$(".interaction .tips").fadeIn();
+			$(".interaction .green_tips").fadeIn();
 			
 		});
-		$(".circle_ani_red").on("click",function(){
-			$(".tips").fadeIn();
-			$(".red_tips").fadeIn();
+		$(".interaction .circle_ani_red").on("click",function(){
+			$(".interaction .tips").fadeIn();
+			$(".interaction .red_tips").fadeIn();
 			
 		});
-		$(".circle_ani_purple").on("click",function(){
-			$(".tips").fadeIn();
-			$(".purple_tips").fadeIn();
+		$(".interaction .circle_ani_purple").on("click",function(){
+			$(".interaction .tips").fadeIn();
+			$(".interaction .purple_tips").fadeIn();
 			
 		});
-		$(".circle_ani_orange").on("click",function(){
-			$(".tips").fadeIn();
-			$(".orange_tips").fadeIn();
+		$(".interaction .circle_ani_orange").on("click",function(){
+			$(".interaction .tips").fadeIn();
+			$(".interaction .orange_tips").fadeIn();
 			
 		});
-		$(".circle_ani_blue").on("click",function(){
-			$(".tips").fadeIn();
-			$(".blue_tips").fadeIn();
+		$(".interaction .circle_ani_blue").on("click",function(){
+			$(".interaction .tips").fadeIn();
+			$(".interaction .blue_tips").fadeIn();
 			
 		});
 		$(".close").on("click",function(){
@@ -37,21 +39,6 @@
 
 		});
 		
-
-
-		
-
-		$(".round").addClass("index_ani");
-
-		if ($('.round').hasClass('index_ani')){
-			setTimeout(function(){window.location.href="choose";},3000);
-			
-		}
-
-		
-	
-
-
 
 	})
 })(jQuery);
