@@ -252,7 +252,12 @@ html{
   width:84%;
   margin:0 0 0 8%;
 }
-
+.address_con{
+  width:60%;
+  margin: 6% 0 0 20%;
+  position: relative;
+  z-index:10;
+}
 /* interaction */
 .interaction{
   width:100%;
