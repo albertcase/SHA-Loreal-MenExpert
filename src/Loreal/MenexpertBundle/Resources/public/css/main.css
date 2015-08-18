@@ -240,22 +240,23 @@ html{
 }
 
 .submit_btn,.router_btn,.activity_btn{
+  /*height:34px;*/
   background: url("/images/main/bg_btn.png") no-repeat center;
-  background-size: 80% 80%;
+  background-size: 80% auto;
   animation: bg_ani 2s ease-in-out infinite;
   -webkit-animation: bg_ani 2s ease-in-out infinite;
 }
 
 @keyframes bg_ani{
-  0%{background-size: 80% 80%; opacity: 0.8;}
-  50%{background-size: 98% 105%; opacity: 1;}
-  100%{background-size: 80% 80%; opacity: 0.8;}
+  0%{background-size: 70% 80%; }
+  50%{background-size: 100% 105%; }
+  100%{background-size: 70% 80%; }
 }
 
 @-webkit-keyframes bg_ani{
-  0%{background-size: 80% 80%; opacity: 0.8;}
-  50%{background-size: 98% 105%; opacity: 1;}
-  100%{background-size: 80% 80%; opacity: 0.8;}
+  0%{background-size: 70% 80%; }
+  50%{background-size: 100% 105%; }
+  100%{background-size: 70% 80%; }
 }
 
 .save{
