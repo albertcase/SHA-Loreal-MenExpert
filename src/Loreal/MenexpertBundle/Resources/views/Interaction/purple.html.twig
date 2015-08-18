@@ -1,1 +1,44 @@
-purple
+{% extends "LorealMenexpertBundle::layout.html.twig" %}
+{% block title %}巴黎欧莱雅{% endblock %}
+{% block body %}
+<div class="game purple_game">
+	<div class="game_header">
+		<img src="/images/map/logo.png" width="100%" class="hudong_logo" />
+		<img src="/images/game/purple_t.png" width="100%" class="game_title"/>
+		<img src="/images/interation/purple_w.png" width="100%" class="game_circle" />
+	</div>
+	<div class="q_1">
+		<img src="/images/game/purple_q_1.png" width="100%" />
+		<div class="answer">
+			<ul>
+				<li>
+					<img src="/images/game/purple_ans_bg.png" width="100%" />
+					<p>A: 辣椒子</p>
+				</li>
+				<li>
+					<img src="/images/game/purple_ans_bg.png" width="100%" />
+					<p>B: 番茄汁</p>
+				</li>
+				<li>
+					<img src="/images/game/purple_ans_bg.png" width="100%" />
+					<p>C: 马提尼</p>
+				</li>
+			</ul>	
+		</div>
+		<div class="answer_finish">
+			<ul>
+				<li>
+					<img src="/images/game/purple_ans_bg.png" width="100%" />
+					<p>下一题</p>
+				</li>
+				<li>
+					<img src="/images/game/purple_ans_bg.png" width="100%" />
+					<p>结束答题</p>
+				</li>
+			</ul>	
+		</div>		
+	</div>	
+	
+</div>	
+
+{% endblock %}

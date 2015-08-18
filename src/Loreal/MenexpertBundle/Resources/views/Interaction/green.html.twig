@@ -1,1 +1,44 @@
-green
+{% extends "LorealMenexpertBundle::layout.html.twig" %}
+{% block title %}巴黎欧莱雅{% endblock %}
+{% block body %}
+<div class="game green_game">
+	<div class="game_header">
+		<img src="/images/map/logo.png" width="100%" class="hudong_logo" />
+		<img src="/images/game/green_t.png" width="100%" class="game_title"/>
+		<img src="/images/interation/green_w.png" width="100%" class="game_circle" />
+	</div>
+	<div class="q_1">
+		<img src="/images/game/green_q_1.png" width="100%" />
+		<div class="answer">
+			<ul>
+				<li>
+					<img src="/images/game/green_ans_bg.png" width="100%" />
+					<p>A: 氨基酸养护</p>
+				</li>
+				<li>
+					<img src="/images/game/green_ans_bg.png" width="100%" />
+					<p>B: 炭爽去油</p>
+				</li>
+				<li>
+					<img src="/images/game/green_ans_bg.png" width="100%" />
+					<p>C: 薄荷酷爽</p>
+				</li>
+			</ul>	
+		</div>
+		<div class="answer_finish">
+			<ul>
+				<li>
+					<img src="/images/game/green_ans_bg.png" width="100%" />
+					<p>下一题</p>
+				</li>
+				<li>
+					<img src="/images/game/green_ans_bg.png" width="100%" />
+					<p>结束答题</p>
+				</li>
+			</ul>	
+		</div>		
+	</div>	
+	
+</div>	
+
+{% endblock %}
