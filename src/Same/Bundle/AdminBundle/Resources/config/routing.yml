@@ -1,0 +1,43 @@
+same_admin_fake:
+    path:     /same/admin/fake
+    defaults: { _controller: SameAdminBundle:Default:fake }
+same_admin_fakedata:
+    path:     /same/admin/fakedata
+    defaults: { _controller: SameAdminBundle:Default:fakedata }
+same_admin_review:
+    path:     /same/admin/review
+    defaults: { _controller: SameAdminBundle:Default:review }
+same_admin_dbtocsv:
+    path:     /same/admin/dbtocsv
+    defaults: { _controller: SameAdminBundle:Default:dbtocsv }
+same_admin_table:
+    path:     /same/admin/table
+    defaults: { _controller: SameAdminBundle:Default:table }
+same_admin_look:
+    path:     /look
+    defaults: { _controller: SameAdminBundle:Default:look }
+same_admin_clear:
+    path:     /clear
+    defaults: { _controller: SameAdminBundle:Default:clear }
+same_admin_index:
+    path:     /same/admin/index
+    defaults: { _controller: SameAdminBundle:Default:index }
+same_admin_login:
+    path:     /same/admin/login
+    defaults: { _controller: SameAdminBundle:Default:login }
+same_admin_file:
+    path:     /same/admin/file
+    defaults: { _controller: SameAdminBundle:Default:file }
+same_admin_list:
+    path:     /same/admin/list
+    defaults: { _controller: SameAdminBundle:Default:list }
+same_admin_upload:
+    path:     /same/admin/upload
+    defaults: { _controller: SameAdminBundle:Default:upload }
+same_admin_submit:
+    path:     /same/admin/submit
+    defaults: { _controller: SameAdminBundle:Default:submit }
+same_admin_homepage:
+    path:     /same/admin/{name}
+    defaults: { _controller: SameAdminBundle:Default:index }
+

@@ -5,3 +5,7 @@ loreal_menexpert:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+admin:
+    resource: "@SameAdminBundle/Resources/config/routing.yml"
+    prefix:    /

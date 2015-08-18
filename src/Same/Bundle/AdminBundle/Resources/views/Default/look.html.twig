@@ -1,0 +1,6 @@
+{% extends 'SameAdminBundle::layout.html.twig' %}
+{% block content %}
+	{% for photo in photos %}
+		<img src="/files{{ photo.url }}">
+	{% endfor %}
+{% endblock %}

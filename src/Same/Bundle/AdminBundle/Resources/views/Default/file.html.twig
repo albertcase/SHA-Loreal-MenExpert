@@ -1,0 +1,48 @@
+{% extends 'SameAdminBundle::layout.html.twig' %}
+{% block title %}LV FILE{% endblock %}
+
+{% block head_css %}
+{% stylesheets filter='cssrewrite' output="css/same_admin_file.css"
+	'bundles/sameadmin/css/reset.css'
+	'bundles/sameadmin/css/main.css'
+	'bundles/sameadmin/css/style.css'
+%}
+<link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block head_js %}
+{% javascripts output="js/same_admin_file.js"
+	'@SameAdminBundle/Resources/public/js/jquery.js'
+    '@SameAdminBundle/Resources/public/js/jquery.form.js'
+    '@SameAdminBundle/Resources/public/js/common.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+
+{% endjavascripts %}
+{% endblock %} 
+
+{% block content %}  
+	<div id="uploaderform">
+	<form action="./upload" method="post" enctype="multipart/form-data" name="UploadForm" id="UploadForm">
+		<h1>上传文件</h1>  
+	    <label>Files
+	    <span class="small"><a href="#" id="AddMoreFileBox">＋</a></span>
+	    </label>
+	    <div id="AddFileInputBox"><input id="fileInputBox" style="margin-bottom: 5px;" type="file"  name="file[]"/></div>
+	    <div class="sep_s"></div>
+	    
+	    <label>Code
+	    <span class="small">Enter your code</span>
+	    </label>
+	    <div><input name="code" type="text" id="code" value="" /></div>
+	    
+	    
+	    <button type="submit" class="button" id="SubmitButton">Upload</button>
+	    
+	    <div id="progressbox"><div id="progressbar"></div ><div id="statustxt">0%</div ></div>
+	</form>
+	</div>
+<input type="hidden" value="" id="aaa">
+{% endblock %} 
+
