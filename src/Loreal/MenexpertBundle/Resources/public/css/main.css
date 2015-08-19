@@ -116,7 +116,7 @@ html{
 }
 
 /* index */
-.index,.error,.success,.choose{
+.index,.error,.success,.choose,.result,.photolist{
   width:100%;
   height:100%;
   overflow: hidden;
@@ -222,7 +222,7 @@ html{
 }
 
 /* main */
-.main .logo,.success .logo{
+.main .logo,.success .logo,.photolist .logo{
   position: relative;
   width:50%;
   margin:16% 0 0 25%;
@@ -589,17 +589,6 @@ html{
 
 
 /* result */
-.result{
-  width:100%;
-  height:100%;
-  overflow: hidden;
-  background:url('/images/bg.jpg') no-repeat;
-  background-size: 100%;
-  position:absolute;
-  top:0;
-  left:0;
-  text-align: center;
-}
 .last_title{
   width:70%;
   position: relative;
@@ -661,6 +650,10 @@ html{
   background:url('/images/game/bg_green.jpg') no-repeat;
   background-size: 100% 100%;
 }
+.blue_game{
+  background:url('/images/game/bg_blue.jpg') no-repeat;
+  background-size: 100% 100%;
+}
 .game_header{
   width:100%;
 
@@ -709,6 +702,9 @@ html{
   text-align: center;
   left:0;
   top:0;
+
+}
+.photolist{
 
 }
 
