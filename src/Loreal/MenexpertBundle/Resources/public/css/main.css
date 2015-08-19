@@ -517,7 +517,7 @@ html{
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 4px;
 } 
 
 /*::-webkit-scrollbar-track {
@@ -704,8 +704,16 @@ html{
   top:0;
 
 }
-.photolist{
-
+.grid{
+  width:80%;
+  margin:0 0 0 10%;
+  padding:20px;
+  
+}
+.grid-item{
+  width:40%;
+  padding: 2%;
+  border: 1px solid #ccc;
 }
 
 @media only screen and (min-width:320px) and (max-height:416px) {
@@ -737,7 +745,7 @@ html{
     bottom:1%;
     left:20%;
   }
-  .main .logo,.success .logo{
+  .main .logo,.success .logo,.photolist .logo{
     position: relative;
     width:48%;
     margin:10% 0 0 26%;
@@ -771,7 +779,7 @@ html{
   .logo{
     margin: 15% 0 0 25%;
   }
-  .main .logo,.success .logo{
+  .main .logo,.success .logo,.photolist .logo{
     margin:10% 0 0 25%;
   }
   .kv {
