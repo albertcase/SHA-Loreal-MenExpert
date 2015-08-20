@@ -2,10 +2,79 @@
 {% block title %}巴黎欧莱雅{% endblock %}
 {% block body %}
 <div class="photolist">
+	<div class="">
+		<img src="/images/tips.png" width="100%" />
+	</div>	
 	<div class="logo">
 		<img src="/images/logo.png" width="100%" />
 	</div>
+	<div class="photoCon">
+		<div class="waterfall">
+			<div class="grid">
+				<div class="grid-item">
+					<img src="/images/photolist/photo1.jpg" width="100%" />
+				</div>
+			    <div class="grid-item">
+			    	<img src="/images/photolist/photo2.jpg" width="100%" />
+			    </div>
 
-</div>	
+			    <div class="grid-item">
+			    	<img src="/images/photolist/photo3.jpg" width="100%" />
+			    </div>
+			    <div class="grid-item">
+					<img src="/images/photolist/photo4.jpg" width="100%" />
+				</div>
+
+				<div class="grid-item">
+			    	<img src="/images/photolist/photo2.jpg" width="100%" />
+			    </div>
+			    <div class="grid-item">
+					<img src="/images/photolist/photo1.jpg" width="100%" />
+				</div>
+				<div class="grid-item">
+			    	<img src="/images/photolist/photo2.jpg" width="100%" />
+			    </div>
+			    <div class="grid-item">
+					<img src="/images/photolist/photo1.jpg" width="100%" />
+				</div>
+				<div class="grid-item">
+			    	<img src="/images/photolist/photo2.jpg" width="100%" />
+			    </div>
+			    		    
+			</div>		
+		</div>
+
+		<div class="details">
+			<img src="" width="100%" class="details_img"/>
+			<img src="/images/interation/close_btn.png" width="100%" class="close_details"/>
+		</div>
+	</div>
+	<div class="yanzu_btn">
+		<a href="map">	
+			<img src="/images/sec_index/yanzu_btn.png" class="btn">
+		</a>
+	</div>	
+
+
+</div>
+<script type="text/javascript">
+	$('.grid').masonry({
+		itemSelector: '.grid-item',
+		//columnWidth: 20
+	});
+	$(".grid-item").on("click",function(){
+		var tImg = $(this).find("img").attr("src");
+		$(".details").fadeIn();
+		$(".details_img").attr("src",tImg);		
+	});
+	$(".close_details").on("touchstart",function(){
+		$(".details").fadeOut();
+		$(".details_img").attr("src","");	
+	});
+
+
+
+
+</script>	
 
 {% endblock %}

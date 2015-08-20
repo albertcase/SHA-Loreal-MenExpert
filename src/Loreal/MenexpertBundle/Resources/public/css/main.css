@@ -483,6 +483,7 @@ html{
   position: relative;
   z-index:102;
 }
+
 .tips_content{
   width:100%;
   height:80%;
@@ -505,9 +506,11 @@ html{
   width:90%;
   height:28%;
   overflow:hidden;
-  overflow-y:scroll;
+  overflow-y:auto;
   margin: 10% 0 0 5%;
   padding: 0 4px 0 0;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: text;
 }
 .tips_logo{
   position: absolute;
@@ -516,8 +519,8 @@ html{
   left:30%;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
+/*::-webkit-scrollbar {
+  width: 20px;
 } 
 
 ::-webkit-scrollbar-track {
@@ -531,6 +534,76 @@ html{
 ::-webkit-scrollbar-corner {
   background-color: #434343;
 } 
+*/
+/*.tips_con::-webkit-scrollbar-button:vertical:decrement {
+    background: #434343 url("/images/interation/arrow_up.png") center top no-repeat;
+    background-size: 100% auto;
+}
+.tips_con::-webkit-scrollbar-button:vertical:increment {
+    background: #434343 url("/images/interation/arrow_down.png") center bottom no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*::-webkit-scrollbar-button:vertical:decrement {
+    background: #434343 url("/images/interation/arrow_up.png") center top no-repeat;
+    background-size: 100% auto;
+}
+::-webkit-scrollbar-button:vertical:increment {
+    background: #434343 url("/images/interation/arrow_down.png") center bottom no-repeat;
+    background-size: 100% auto;
+}
+
+.tips_con::-webkit-scrollbar-button:start:decrement,
+.tips_con::-webkit-scrollbar-button:end:increment {
+    display: block;
+}*/
+
+
+.tips_con::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tips_con::-webkit-scrollbar-button:vertical {
+    height: 10px;
+}
+
+.tips_con::-webkit-scrollbar-track:vertical{
+    background: #434343;
+}
+
+.tips_con::-webkit-scrollbar-button:vertical:decrement {
+    background: rgba(0,0,0,0.9) url("/images/interation/arrow_up.png") center top no-repeat;
+    background-size: 100% auto;
+}
+
+.tips_con::-webkit-scrollbar-button:vertical:increment {
+    background: rgba(0,0,0,0.9) url("/images/interation/arrow_down.png") center bottom no-repeat;
+    background-size: 100% auto;
+}
+/* Forced Scrollbar Mode Styles */
+
+.tips_con::-webkit-scrollbar-button:start:decrement,
+.tips_con::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+
+::-webkit-scrollbar-thumb:vertical {
+    background: #d05c0b;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    background: #d05c0b;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+    background: #d05c0b;
+}
+
+::-webkit-scrollbar-thumb:vertical:window-inactive {
+    background: #d05c0b;
+}
+
 
 /* loading */
 .loading{
@@ -704,15 +777,51 @@ html{
   top:0;
 
 }
-.grid{
-  width:80%;
-  margin:0 0 0 12%;
-  padding:20px;
-  
+.photoCon{
+  position: relative;
+  width: 75%;
+  height:67%;
+  display: inline-block;
+  margin: 2% 0 0 0;
+}
+.waterfall{
+  width:90%;
+  height: 99%;
+  overflow: hidden;
+  overflow-y: auto; 
+  position: relative; 
+  display: inline-block;
 }
 .grid-item{
-  width:40%;
-  padding: 0 0 4% 0;
+  width:48%;  
+  margin: 1%;    
+  float: left;  
+  overflow: hidden;   
+}
+.details{
+  width:100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background: rgba(0,0,0,0.9);
+  z-index: 100;
+  display:none;
+}
+.details_img{
+  width:70%;
+  margin:10% 0 0 0;
+}
+.close_details{
+  width: 8%;
+  position: absolute;
+  bottom:10px;
+  right:10px;
+}
+.yanzu_btn{
+  width:100%;
+  position:fixed;
+  bottom:1%;
 }
 
 @media only screen and (min-width:320px) and (max-height:416px) {
