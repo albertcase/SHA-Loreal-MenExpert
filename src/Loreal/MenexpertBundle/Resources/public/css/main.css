@@ -777,6 +777,16 @@ html{
   top:0;
 
 }
+
+/* photolist */
+.photo_tips{
+  width:80%;
+  position: absolute;
+  top:30%;
+  left:10%;
+  z-index:9999;
+  display: none;
+}
 .photoCon{
   position: relative;
   width: 75%;

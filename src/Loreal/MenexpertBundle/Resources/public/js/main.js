@@ -38,7 +38,9 @@
 			$(".tips_content").fadeOut();
 
 		});
+		$(".photo_tips").fadeIn(3000).fadeOut(5000);
 		
+
 
 	})
 })(jQuery);
