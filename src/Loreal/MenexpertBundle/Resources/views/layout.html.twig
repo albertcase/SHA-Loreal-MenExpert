@@ -16,9 +16,11 @@
 {% block head_scripts %}
 {% javascripts output="js/spring.js"
     '@LorealMenexpertBundle/Resources/public/js/jquery.js'
+    '@LorealMenexpertBundle/Resources/public/js/PxLoader.js'          
+    '@LorealMenexpertBundle/Resources/public/js/masonry.pkgd.js'
     '@LorealMenexpertBundle/Resources/public/js/main.js'
-    '@LorealMenexpertBundle/Resources/public/js/jweixin-1.0.0.js'
-    '@LorealMenexpertBundle/Resources/public/js/masonry.pkgd.js'   
+    '@LorealMenexpertBundle/Resources/public/js/loading.js'
+    '@LorealMenexpertBundle/Resources/public/js/jweixin-1.0.0.js'   
 %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}

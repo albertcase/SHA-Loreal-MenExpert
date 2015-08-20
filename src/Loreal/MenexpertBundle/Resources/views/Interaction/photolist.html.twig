@@ -1,6 +1,14 @@
 {% extends "LorealMenexpertBundle::layout.html.twig" %}
 {% block title %}巴黎欧莱雅{% endblock %}
 {% block body %}
+<div class="loading">
+	<div class="spinner">
+		<div class="bounce1"></div>
+		<div class="bounce2"></div>
+		<div class="bounce3"></div>
+	</div>
+	<p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
+</div>
 <div class="photolist">
 	<div class="photo_tips">
 		<img src="/images/photolist/tips.png" width="100%" />
@@ -58,19 +66,32 @@
 
 </div>
 <script type="text/javascript">
-	$('.grid').masonry({
-		itemSelector: '.grid-item',
-		//columnWidth: 20
-	});
-	$(".grid-item").on("click",function(){
-		var tImg = $(this).find("img").attr("src");
-		$(".details").fadeIn();
-		$(".details_img").attr("src",tImg);		
-	});
-	$(".close_details").on("touchstart",function(){
-		$(".details").fadeOut();
-		$(".details_img").attr("src","");	
-	});
+
+	var LoadingImg = ["/images/photolist/photo1.jpg","/images/photolist/photo2.jpg",
+				"/images/photolist/photo3.jpg","/images/photolist/photo4.jpg"];
+	$(".loading").fadeIn();
+	
+
+	function endDoing(){
+		$('.grid').masonry({
+			itemSelector: '.grid-item'
+			//columnWidth: 20
+		});
+
+		$(".grid-item").on("click",function(){
+			var tImg = $(this).find("img").attr("src");
+			$(".details").fadeIn();
+			$(".details_img").attr("src",tImg);		
+		});
+		$(".close_details").on("click",function(){
+			$(".details").hide();
+			$(".details_img").attr("src","");	
+		});
+	}
+
+	loading(LoadingImg, endDoing);
+	
+	
 
 
 
