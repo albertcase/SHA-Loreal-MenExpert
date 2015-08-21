@@ -23,6 +23,15 @@
 				</li>
 			</ul>	
 		</div>		
+	</div>
+
+	<div class="tips">
+  		<img src="/images/interation/tipsBox.png" class="tips_box">
+		
+		<img src="/images/interation/close_btn.png" width="100%" class="close"/>
+		<div class="tips_content">
+			<img src="/images/interation/tipsLogo.png" class="tips_logo">
+		</div>	
 	</div>	
 	
 </div>	
@@ -75,16 +84,16 @@ function questionlistFun(cnum, skin){
 	$(".answer_finish").before(ListData);
 
 	$(".answer_con li").on("click",function(){
-		$(this).addClass("hover");
+		/*$(this).addClass("hover");
 		$(".answer_con li").removeClass("hover");
-
+*/
 		var pos=$(this).index();
 		var corrent=$(this).parents(".answer_con").attr("data-answer");
 		if(pos==corrent){
 			alert("corrent");
 		}
 		else{
-			alert("error");
+			$(".tips").fadeIn();
 			$(this).find("img").attr("src","/images/game/purple_ans_bg.png");
 
 		}
