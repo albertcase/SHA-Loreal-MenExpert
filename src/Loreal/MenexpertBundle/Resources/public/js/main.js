@@ -42,6 +42,10 @@
 
 		});
 		$(".photo_tips").fadeIn(3000).fadeOut(5000);
+
+		$(".fin").on("click",function(){
+			location.href="./map";
+		});
 		
 
 

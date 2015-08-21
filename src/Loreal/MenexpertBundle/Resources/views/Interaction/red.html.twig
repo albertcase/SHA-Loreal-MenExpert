@@ -8,37 +8,98 @@
 		<img src="/images/interation/red_w.png" width="100%" class="game_circle" />
 	</div>
 	<div class="q_1">
-		<img src="/images/game/red_q_1.png" width="100%" />
-		<div class="answer">
-			<ul>
-				<li>
-					<img src="/images/game/red_ans_bg.png" width="100%" />
-					<p>A: 红色</p>
-				</li>
-				<li>
-					<img src="/images/game/red_ans_bg.png" width="100%" />
-					<p>B: 黑色</p>
-				</li>
-				<li>
-					<img src="/images/game/red_ans_bg.png" width="100%" />
-					<p>C: 银色</p>
-				</li>
-			</ul>	
-		</div>
 		<div class="answer_finish">
 			<ul>
-				<li>
+				<li class="fin">	
 					<img src="/images/game/red_ans_bg.png" width="100%" />
-					<p>下一题</p>
+					<p>下一题</p>		
 				</li>
+				
 				<li>
-					<img src="/images/game/red_ans_bg.png" width="100%" />
-					<p>结束答题</p>
+					<a href="choose">
+						<img src="/images/game/red_ans_bg.png" width="100%" />
+						<p>结束答题</p>
+					</a>
 				</li>
 			</ul>	
 		</div>		
 	</div>	
 	
 </div>	
+<script type="text/javascript">
+
+	var question = [{
+                "id": "1",
+                "question": "/images/game/red_q_1.png",
+                "ans1": "A: 红色1",
+                "ans2": "B: 黑色",
+                "ans3": "C: 银色",
+                "answer": "1"
+            },
+            {
+                "id": "2",
+                "question": "/images/game/red_q_1.png",
+                "ans1": "A: 红色",
+                "ans2": "B: 黑色",
+                "ans3": "C: 银色2",
+                "answer": "2"
+            },
+            {
+                "id": "3",
+                "question": "/images/game/red_q_1.png",
+                "ans1": "A: 红色0",
+                "ans2": "B: 黑色",
+                "ans3": "C: 银色",
+                "answer": "0"
+            },
+            {
+                "id": "4",
+                "question": "/images/game/red_q_1.png",
+                "ans1": "A: 红色",
+                "ans2": "B: 黑色1",
+                "ans3": "C: 银色2",
+                "answer": "2"
+            }];
+        
+
+
+
+function questionlistFun(cnum, skin){
+
+	var ListData = $.map(question,function(v,k){
+		if(k == cnum){
+			return '<img src="'+v.question+'" width="100%" /><div class="answer"><ul class="answer_con" data-answer='+v.answer+'><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans1+'</p></li><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans2+'</p></li><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans3+'</p></li></ul></div>';
+		}
+	}).join("");
+
+	$(".answer_finish").before(ListData);
+
+	$(".answer_con li").on("click",function(){
+		$(this).addClass("hover");
+		$(".answer_con li").removeClass("hover");
+
+		var pos=$(this).index();
+		var corrent=$(this).parents(".answer_con").attr("data-answer");
+		if(pos==corrent){
+			alert("corrent");
+		}
+		else{
+			alert("error");
+			$(this).find("img").attr("src","/images/game/purple_ans_bg.png");
+
+		}
+
+	})
+
+}
+
+var randomNum=parseInt(Math.round(Math.random()*4));
+questionlistFun(randomNum, "red");
+
+        			
+        		
+
+
+</script>
 
 {% endblock %}
