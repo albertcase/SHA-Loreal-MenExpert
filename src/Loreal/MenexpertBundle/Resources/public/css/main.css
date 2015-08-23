@@ -761,7 +761,7 @@ html{
   margin:1em 0 0 0;
 }  
 .answer ul,.answer_finish ul{
-  width:35%;
+  width:50%;
   display: inline-block;
 }
 
@@ -784,6 +784,23 @@ html{
   text-align: center;
   left:0;
   top:0;
+}
+
+.tips_game{
+  width:80%;
+  height:52%;
+  position: absolute;
+  top:20%;
+  left:10%;
+  display:none;
+  z-index:10000;
+}
+.tips_success,.tips_fail{
+  width:80%;
+  position: absolute;
+  top: 25%;
+  left:10%;
+  display: none;
 }
 
 /* photolist */

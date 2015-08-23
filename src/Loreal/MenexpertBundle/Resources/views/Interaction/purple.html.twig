@@ -8,37 +8,106 @@
 		<img src="/images/interation/purple_w.png" width="100%" class="game_circle" />
 	</div>
 	<div class="q_1">
-		<img src="/images/game/purple_q_1.png" width="100%" />
-		<div class="answer">
-			<ul>
-				<li>
-					<img src="/images/game/purple_ans_bg.png" width="100%" />
-					<p>A: 辣椒子</p>
-				</li>
-				<li>
-					<img src="/images/game/purple_ans_bg.png" width="100%" />
-					<p>B: 番茄汁</p>
-				</li>
-				<li>
-					<img src="/images/game/purple_ans_bg.png" width="100%" />
-					<p>C: 马提尼</p>
-				</li>
-			</ul>	
-		</div>
 		<div class="answer_finish">
 			<ul>
-				<li>
-					<img src="/images/game/purple_ans_bg.png" width="100%" />
-					<p>下一题</p>
+				<li class="fin">	
+					<img src="/images/game/purple_next_bg.png" width="100%" />
+					<p>下一题</p>		
 				</li>
+				
 				<li>
-					<img src="/images/game/purple_ans_bg.png" width="100%" />
-					<p>结束答题</p>
+					<a href="choose">
+						<img src="/images/game/purple_next_bg.png" width="100%" />
+						<p>结束答题</p>
+					</a>
 				</li>
 			</ul>	
 		</div>		
+	</div>
+
+	<div class="tips_game">
+  		<img src="/images/game/tipsBox.png" class="tips_box">
+  		<img src="/images/game/success.png" width="100%" class="tips_success" />
+  		<img src="/images/game/fail.png" width="100%" class="tips_fail" />
+		
+		<div class="tips_content">
+			<img src="/images/interation/tipsLogo.png" class="tips_logo">
+		</div>	
 	</div>	
 	
 </div>	
+<script type="text/javascript">
+
+	var question = [{
+                "id": "1",
+                "question": "/images/game/purple_q_1.png",
+                "ans1": "A.	火山矿物净彻",
+                "ans2": "B.	炭爽去油",
+                "ans3": "C.	氨基酸养护",
+                "answer": "2"
+            },
+            {
+                "id": "2",
+                "question": "/images/game/purple_q_2.png",
+                "ans1": "A.	辣椒子",
+                "ans2": "B.	番茄汁",
+                "ans3": "C.	马提尼",
+                "answer": "2"
+            },
+            {
+                "id": "3",
+                "question": "/images/game/purple_q_3.png",
+                "ans1": "A.	Mai Tai媚态",
+                "ans2": "B.	Mojito 莫吉托",
+                "ans3": "C.	Bloody Mary 血腥玛丽",
+                "answer": "0"
+            },
+            {
+                "id": "4",
+                "question": "/images/game/purple_q_4.png",
+                "ans1": "A.	Remy Cointreau",
+                "ans2": "B.	Dita Von Teese",
+                "ans3": "C.	Johnny Walker",
+                "answer": "1"
+            }];
+        
+
+
+
+function questionlistFun(cnum, skin){
+
+	var ListData = $.map(question,function(v,k){
+		if(k == cnum){
+			return '<img src="'+v.question+'" width="100%" /><div class="answer"><ul class="answer_con" data-answer='+v.answer+'><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans1+'</p></li><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans2+'</p></li><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans3+'</p></li></ul></div>';
+		}
+	}).join("");
+
+	$(".answer_finish").before(ListData);
+
+	$(".answer_con li").on("click",function(){
+		/*$(this).addClass("hover");
+		$(".answer_con li").removeClass("hover");
+*/
+		var pos=$(this).index();
+		var corrent=$(this).parents(".answer_con").attr("data-answer");
+		if(pos==corrent){
+			$(".tips_game").fadeIn().fadeOut(4000);
+			$(".tips_success").fadeIn().fadeOut(4000);
+		}
+		else{
+			$(".tips_game").fadeIn().fadeOut(4000);
+			$(".tips_fail").fadeIn().fadeOut(4000);
+			$(this).find("img").attr("src","/images/game/grey_ans_bg.png");
+
+		}
+
+	})
+
+}
+
+var randomNum=parseInt(Math.round(Math.random()*3));
+questionlistFun(randomNum, "purple");
+
+</script>
 
 {% endblock %}

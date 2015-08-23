@@ -8,37 +8,110 @@
 		<img src="/images/interation/orange_w.png" width="100%" class="game_circle" />
 	</div>
 	<div class="q_1">
-		<img src="/images/game/orange_q_1.png" width="100%" />
-		<div class="answer">
-			<ul>
-				<li>
-					<img src="/images/game/orange_ans_bg.png" width="100%" />
-					<p>A: 迅速收回</p>
-				</li>
-				<li>
-					<img src="/images/game/orange_ans_bg.png" width="100%" />
-					<p>B: 立在胸前</p>
-				</li>
-				<li>
-					<img src="/images/game/orange_ans_bg.png" width="100%" />
-					<p>C: 保护面部</p>
-				</li>
-			</ul>	
-		</div>
 		<div class="answer_finish">
 			<ul>
-				<li>
-					<img src="/images/game/orange_ans_bg.png" width="100%" />
-					<p>下一题</p>
+				<li class="fin">	
+					<img src="/images/game/orange_next_bg.png" width="100%" />
+					<p>下一题</p>		
 				</li>
+				
 				<li>
-					<img src="/images/game/orange_ans_bg.png" width="100%" />
-					<p>结束答题</p>
+					<a href="choose">
+						<img src="/images/game/orange_next_bg.png" width="100%" />
+						<p>结束答题</p>
+					</a>
 				</li>
 			</ul>	
 		</div>		
+	</div>
+
+	<div class="tips_game">
+  		<img src="/images/game/tipsBox.png" class="tips_box">
+  		<img src="/images/game/success.png" width="100%" class="tips_success" />
+  		<img src="/images/game/fail.png" width="100%" class="tips_fail" />
+		
+		<div class="tips_content">
+			<img src="/images/interation/tipsLogo.png" class="tips_logo">
+		</div>	
 	</div>	
 	
 </div>	
+<script type="text/javascript">
+
+	var question = [{
+                "id": "1",
+                "question": "/images/game/orange_q_1.png",
+                "ans1": "A.	维他强韧",
+                "ans2": "B.	氨基酸养护",
+                "ans3": "C.	火山矿物净彻",
+                "answer": "0"
+            },
+            {
+                "id": "2",
+                "question": "/images/game/orange_q_2.png",
+                "ans1": "A.	1",
+                "ans2": "B.	2",
+                "ans3": "C.	3",
+                "answer": "1"
+            },
+            {
+                "id": "3",
+                "question": "/images/game/orange_q_3.png",
+                "ans1": "A.	5",
+                "ans2": "B.	8",
+                "ans3": "C.	10",
+                "answer": "1"
+            },
+            {
+                "id": "4",
+                "question": "/images/game/orange_q_4.png",
+                "ans1": "A.	迅速收回",
+                "ans2": "B.	立在胸前",
+                "ans3": "C.	保护面部",
+                "answer": "2"
+            }];
+        
+
+
+
+function questionlistFun(cnum, skin){
+
+	var ListData = $.map(question,function(v,k){
+		if(k == cnum){
+			return '<img src="'+v.question+'" width="100%" /><div class="answer"><ul class="answer_con" data-answer='+v.answer+'><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans1+'</p></li><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans2+'</p></li><li><img src="/images/game/'+skin+'_ans_bg.png" width="100%" /><p>'+v.ans3+'</p></li></ul></div>';
+		}
+	}).join("");
+
+	$(".answer_finish").before(ListData);
+
+	$(".answer_con li").on("click",function(){
+		/*$(this).addClass("hover");
+		$(".answer_con li").removeClass("hover");
+*/
+		var pos=$(this).index();
+		var corrent=$(this).parents(".answer_con").attr("data-answer");
+		if(pos==corrent){
+			$(".tips_game").fadeIn().fadeOut(4000);
+			$(".tips_success").fadeIn().fadeOut(4000);
+		}
+		else{
+			$(".tips_game").fadeIn().fadeOut(4000);
+			$(".tips_fail").fadeIn().fadeOut(4000);
+			$(this).find("img").attr("src","/images/game/grey_ans_bg.png");
+
+		}
+
+	})
+
+}
+
+var randomNum=parseInt(Math.round(Math.random()*3));
+questionlistFun(randomNum, "orange");
+
+        			
+        		
+
+
+</script>
 
 {% endblock %}
