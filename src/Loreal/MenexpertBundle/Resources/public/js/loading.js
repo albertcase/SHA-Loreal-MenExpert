@@ -21,7 +21,6 @@ function LoadFn ( arr , fn , fn2){
 
 function loading(allAmg, endFun){
 	LoadFn(allAmg , function (){
-		$(".loading").hide();
 		$(".photolist").animate({"opacity" : 1});
 		endFun();
         console.log("加载完成!");

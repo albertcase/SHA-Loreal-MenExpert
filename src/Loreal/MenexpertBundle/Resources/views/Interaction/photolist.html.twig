@@ -1,14 +1,7 @@
 {% extends "LorealMenexpertBundle::layout.html.twig" %}
 {% block title %}巴黎欧莱雅{% endblock %}
 {% block body %}
-<div class="loading">
-	<div class="spinner">
-		<div class="bounce1"></div>
-		<div class="bounce2"></div>
-		<div class="bounce3"></div>
-	</div>
-	<p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
-</div>
+
 <div class="photolist">
 	<div class="photo_tips">
 		<img src="/images/photolist/tips.png" width="100%" />
@@ -47,8 +40,7 @@
 	{% endfor %}
 	//var LoadingImg = ["/images/photolist/photo1.jpg","/images/photolist/photo2.jpg",
 	//			"/images/photolist/photo3.jpg","/images/photolist/photo4.jpg"];
-	$(".loading").fadeIn();
-	
+
 
 	function endDoing(){
 		$('.grid').masonry({
