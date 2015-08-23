@@ -19,36 +19,11 @@
 	<div class="photoCon">
 		<div class="waterfall">
 			<div class="grid">
+				{% for photo in photos %}
 				<div class="grid-item">
-					<img src="/images/photolist/photo1.jpg" width="100%" />
+					<img src="/{{photo.url}}" width="100%" />
 				</div>
-			    <div class="grid-item">
-			    	<img src="/images/photolist/photo2.jpg" width="100%" />
-			    </div>
-
-			    <div class="grid-item">
-			    	<img src="/images/photolist/photo3.jpg" width="100%" />
-			    </div>
-			    <div class="grid-item">
-					<img src="/images/photolist/photo4.jpg" width="100%" />
-				</div>
-
-				<div class="grid-item">
-			    	<img src="/images/photolist/photo2.jpg" width="100%" />
-			    </div>
-			    <div class="grid-item">
-					<img src="/images/photolist/photo1.jpg" width="100%" />
-				</div>
-				<div class="grid-item">
-			    	<img src="/images/photolist/photo2.jpg" width="100%" />
-			    </div>
-			    <div class="grid-item">
-					<img src="/images/photolist/photo1.jpg" width="100%" />
-				</div>
-				<div class="grid-item">
-			    	<img src="/images/photolist/photo2.jpg" width="100%" />
-			    </div>
-			    		    
+				{% endfor %}		    
 			</div>		
 		</div>
 
@@ -66,9 +41,12 @@
 
 </div>
 <script type="text/javascript">
-
-	var LoadingImg = ["/images/photolist/photo1.jpg","/images/photolist/photo2.jpg",
-				"/images/photolist/photo3.jpg","/images/photolist/photo4.jpg"];
+	var LoadingImg = new Array();
+	{% for photo in photos %}
+		LoadingImg.push("/{{photo.url}}");
+	{% endfor %}
+	//var LoadingImg = ["/images/photolist/photo1.jpg","/images/photolist/photo2.jpg",
+	//			"/images/photolist/photo3.jpg","/images/photolist/photo4.jpg"];
 	$(".loading").fadeIn();
 	
 

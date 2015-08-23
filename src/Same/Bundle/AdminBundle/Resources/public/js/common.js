@@ -76,15 +76,10 @@ $("#SubmitButton").click(function () {
 }); 
 
 function submitForm(){
-	var code=$("#code").val();
-	if(code==""){
-		alert("Please enter the code!");
-		return false;
-	}
 	$.ajax({
 		url:BASEURL+"/same/admin/submit",
 		type:"post",
-		data:{"code":code,"files":$("#aaa").val()},
+		data:{"files":$("#aaa").val()},
 		dataType:"json",
 		success:function(data){
 			$("#SubmitButton").removeAttr('disabled');

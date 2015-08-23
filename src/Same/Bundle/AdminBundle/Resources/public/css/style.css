@@ -29,7 +29,7 @@
 margin:25% auto 0 auto;
 width:400px;
 padding:16px;
-border: dashed 1px #0abad1;
+border: dashed 1px #020107;
 background:#f5fbfd;
 border-radius: 10px;
 font-family:Arial, Helvetica, sans-serif;
@@ -131,16 +131,16 @@ border-radius: 10px;
 	-moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
 	box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea) );
-	background:-moz-linear-gradient( center top, #bddbfa 5%, #80b5ea 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #020107) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #020107 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#020107');
 	background-color:#bddbfa;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
 	border-radius:6px;
-	border:1px solid #84bbf3;
+	/*border:1px solid #84bbf3;*/
 	display:inline-block;
-	color:#3b6c80;
+	color:#ffffff;
 	font-family:Arial;
 	font-size:15px;
 	font-weight:normal;
@@ -173,7 +173,7 @@ border-radius: 10px;
 	margin:20px 0 0 -20px;
 }
 #AddMoreFileBox{
-	border: 1px dashed #0abad1;
-	color: #0abad1;
+	border: 1px dashed #020107;
+	color: #020107;
 	padding:0 1px;
 }
