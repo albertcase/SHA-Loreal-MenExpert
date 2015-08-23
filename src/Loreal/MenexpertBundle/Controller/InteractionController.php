@@ -3,6 +3,7 @@
 namespace Loreal\MenexpertBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Loreal\MenexpertBundle\Entity\Photos;
 
 class InteractionController extends Controller
 {
@@ -18,7 +19,8 @@ class InteractionController extends Controller
 
     public function photolistAction()
     {
-        return $this->render('LorealMenexpertBundle:Interaction:photolist.html.twig');
+        $photos = $this->getDoctrine()->getRepository('LorealMenexpertBundle:Photos')->findAll();
+        return $this->render('LorealMenexpertBundle:Interaction:photolist.html.twig', array('photos' => $photos));
     }
 
     public function mapAction()
