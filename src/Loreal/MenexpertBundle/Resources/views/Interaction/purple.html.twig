@@ -93,6 +93,7 @@ function questionlistFun(cnum, skin){
 		if(pos==corrent){
 			$(".tips_game").fadeIn().fadeOut(4000);
 			$(".tips_success").fadeIn().fadeOut(4000);
+			$(".answer_con li").unbind("click");
 		}
 		else{
 			$(".tips_game").fadeIn().fadeOut(4000);
@@ -100,7 +101,7 @@ function questionlistFun(cnum, skin){
 			$(this).find("img").attr("src","/images/game/grey_ans_bg.png");
 
 		}
-
+		answerLog('purple',pos);
 	})
 
 }
@@ -108,6 +109,17 @@ function questionlistFun(cnum, skin){
 var randomNum=parseInt(Math.round(Math.random()*3));
 questionlistFun(randomNum, "purple");
 
+function answerLog(type,answer){
+	$.ajax({
+		type:"post",
+		url:"{{url('loreal_menexpert_api_answer')}}",
+		data:{"type":type, "answer":answer},
+		dataType:"json",
+		success:function(status){
+
+		}
+	})
+}    
 </script>
 
 {% endblock %}

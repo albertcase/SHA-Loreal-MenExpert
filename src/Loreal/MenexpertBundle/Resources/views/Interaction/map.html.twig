@@ -8,56 +8,99 @@
 	<div class="inter_content">
 		<div class="purple">
 			<img src="/images/interation/taste.png" width="100%" />
-			<a href="purple">
+				{% if (answerList.purple) %}
+				<div class="circle_ani_purple">
+					<img src="/images/interation/circle_grey.png" width="100%">
+					<img src="/images/interation/purple_g.png" width="100%" class="circle_on">
+					<img src="/images/interation/taste_t.png" width="100%" class="circle_title">	
+				</div>
+				{% else %}
+			<a href="{{ url('loreal_menexpert_interaction_purple') }}">
 				<div class="circle_ani_purple">
 					<img src="/images/interation/circle_purple.png" width="100%" class="circle">
 					<img src="/images/interation/purple.png" width="100%" class="circle_on">
 					<img src="/images/interation/taste_t.png" width="100%" class="circle_title">	
 				</div>
-			</a>	
+			</a>
+				{% endif %}
 		</div>
 		<div class="red">
-			<a href="red">
+				{% if (answerList.red) %}
+				<div class="circle_ani_red">
+					<img src="/images/interation/circle_grey.png" width="100%">
+					<img src="/images/interation/red_g.png" width="100%" class="circle_on">
+					<img src="/images/interation/heater_t.png" width="100%" class="circle_title">	
+				</div>
+				{% else %}
+			<a href="{{ url('loreal_menexpert_interaction_red') }}">
 				<div class="circle_ani_red">
 					<img src="/images/interation/circle_red.png" width="100%" class="circle">
 					<img src="/images/interation/red.png" width="100%" class="circle_on">
 					<img src="/images/interation/heater_t.png" width="100%" class="circle_title">	
 				</div>
-			</a>	
+			</a>
+				{% endif %}
 			<img src="/images/interation/heater.png" width="90%" class="heater">
 		</div>
 
 		<div class="orange">
 			<img src="/images/interation/power.png" width="90%">
-			<a href="orange">
+				{% if (answerList.orange) %}
+				<div class="circle_ani_orange">
+					<img src="/images/interation/circle_grey.png" width="100%">
+					<img src="/images/interation/orange_g.png" width="100%" class="circle_on">
+					<img src="/images/interation/power_t.png" width="100%" class="circle_title">	
+				</div>
+				{% else %}
+			<a href="{{ url('loreal_menexpert_interaction_orange') }}">
 				<div class="circle_ani_orange">
 					<img src="/images/interation/circle_orange.png" width="100%" class="circle">
 					<img src="/images/interation/orange.png" width="100%" class="circle_on">
 					<img src="/images/interation/power_t.png" width="100%" class="circle_title">	
 				</div>
-			</a>		
+			</a>
+				{% endif %}	
 		</div>
 
 		<div class="green">
 			<img src="/images/interation/gentle.png" width="100%">
-			<a href="green">
+				{% if (answerList.green) %}
+				<div class="circle_ani_green">
+					<img src="/images/interation/circle_grey.png" width="100%">
+					<img src="/images/interation/green_g.png" width="100%" class="circle_on">
+					<img src="/images/interation/gentle_t.png" width="100%" class="circle_title">	
+				</div>
+				{% else %}
+			<a href="{{ url('loreal_menexpert_interaction_green') }}">
 				<div class="circle_ani_green">
 					<img src="/images/interation/circle_green.png" width="100%" class="circle">
 					<img src="/images/interation/green.png" width="100%" class="circle_on">
 					<img src="/images/interation/gentle_t.png" width="100%" class="circle_title">	
 				</div>
-			</a>		
+			</a>
+				{% endif %}
+					
 		</div>
 
 		<div class="blue">
 			<img src="/images/interation/limit.png" width="100%">
-			<a href="blue">
+			
+				{% if (answerList.blue) %}
+				<div class="circle_ani_blue">
+					<img src="/images/interation/circle_grey.png" width="100%">
+					<img src="/images/interation/blue_g.png" width="100%" class="circle_on">
+					<img src="/images/interation/limit_t.png" width="100%" class="circle_title">	
+				</div>
+				{% else %}
+			<a href="{{ url('loreal_menexpert_interaction_blue') }}">
 				<div class="circle_ani_blue">
 					<img src="/images/interation/circle_blue.png" width="100%" class="circle">
 					<img src="/images/interation/blue.png" width="100%" class="circle_on">
 					<img src="/images/interation/limit_t.png" width="100%" class="circle_title">	
 				</div>
-			</a>		
+			</a>
+				{% endif %}
+				
 		</div>
 		<div class="start">
 			<img src="/images/interation/start.png" width="100%" class="start_t"/>
@@ -78,5 +121,12 @@
 	</div>
 
 </div>	
-
+<script>
+{% if tips == 0 %}
+$(".main .tips").fadeIn(1000);
+$(".main_tips").fadeIn(1000);
+$(".map_area .tips").fadeIn(1000);
+$(".map_tips").fadeIn(1000);
+{% endif %}
+</script>
 {% endblock %}

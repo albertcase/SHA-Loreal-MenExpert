@@ -57,4 +57,22 @@ class ApiController extends Controller
         fclose($handle);
         echo $ln;exit;
     }
+
+    public function answerAction()
+    {
+        $request = $this->getRequest()->request;
+        $type = $request->get('type');
+        $answer = $request->get('answer');
+
+        $session = $this->getRequest()->getSession();
+        $session->set('menexpert_' . $type, 1);
+
+        $status = array('status' => '1');
+        $response = new JsonResponse();
+        $response->setData($status);
+        return $response;
+
+    }
+
+
 }

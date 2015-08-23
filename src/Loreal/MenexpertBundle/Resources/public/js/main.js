@@ -4,11 +4,6 @@
 	$(function(){
 
 		
-
-		$(".main .tips").fadeIn(1000);
-		$(".main_tips").fadeIn(1000);
-		$(".map_area .tips").fadeIn(1000);
-		$(".map_tips").fadeIn(1000);
 	
 		$(".interaction .circle_ani_green").on("click",function(){
 			$(".interaction .tips").fadeIn();

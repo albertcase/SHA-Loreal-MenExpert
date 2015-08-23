@@ -73,3 +73,7 @@ loreal_menexpert_interaction_result:
 loreal_menexpert_api_insert:
     path:     /api/insert
     defaults: { _controller: LorealMenexpertBundle:Api:insert }
+
+loreal_menexpert_api_answer:
+    path:     /api/answer
+    defaults: { _controller: LorealMenexpertBundle:Api:answer }
