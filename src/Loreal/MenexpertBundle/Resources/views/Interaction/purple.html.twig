@@ -93,6 +93,7 @@ function questionlistFun(cnum, skin){
 		if(pos==corrent){
 			$(".tips_game").fadeIn().fadeOut(3000);
 			$(".tips_success").fadeIn().fadeOut(3000);
+			$(this).find("img").attr("src","/images/game/grey_ans_bg.png");
 			$(".answer_con li").unbind("click");
 		}
 		else{

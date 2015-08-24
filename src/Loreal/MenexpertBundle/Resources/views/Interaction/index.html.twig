@@ -5,9 +5,7 @@
 	<div class="logo">
 		<img src="/images/logo.png" width="100%" />
 	</div>
-	<div class="zoom" id="index_ani">
-		<img src="/images/sec_index/bg.png" class="round" />
-		<img src="/images/sec_index/human.png" class="human" />
+	<div class="zoom">
 	</div>
 	
 </div>
@@ -15,6 +13,9 @@
 
 	var LoadingImg = ["/images/sec_index/bg.jpg",
 	"/images/sec_index/bg.png",
+	"/images/sec_index/human_ani_1.jpg",
+	"/images/sec_index/human_ani_2.jpg",
+	"/images/sec_index/human_ani_3.jpg",
 	"/images/sec_index/human.png",
 	"/images/sec_index/loading_title.png",
 	"/images/sec_index/photo_btn.png",
@@ -127,11 +128,11 @@
     loadingAll(LoadingImg, roundAni);
 
     function roundAni(){
-		$(".round").addClass("index_ani");
+		$(".zoom").addClass("index_ani");
 
-		if ($('.round').hasClass('index_ani')){
+		if ($('.zoom').hasClass('index_ani')){
 			setTimeout(function(){
-				window.location.href="{{url('loreal_menexpert_interaction_choose')}}";},3000);}			
+				window.location.href="{{url('loreal_menexpert_interaction_choose')}}";},6000);}	
 	}
 </script>
 	
