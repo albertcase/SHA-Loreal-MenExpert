@@ -16,7 +16,7 @@
 				</li>
 				
 				<li>
-					<a href="choose">
+					<a href="{{ url('loreal_menexpert_interaction_choose') }}">
 						<img src="/images/game/purple_next_bg.png" width="100%" />
 						<p>结束答题</p>
 					</a>
@@ -91,13 +91,13 @@ function questionlistFun(cnum, skin){
 		var pos=$(this).index();
 		var corrent=$(this).parents(".answer_con").attr("data-answer");
 		if(pos==corrent){
-			$(".tips_game").fadeIn().fadeOut(4000);
-			$(".tips_success").fadeIn().fadeOut(4000);
+			$(".tips_game").fadeIn().fadeOut(3000);
+			$(".tips_success").fadeIn().fadeOut(3000);
 			$(".answer_con li").unbind("click");
 		}
 		else{
-			$(".tips_game").fadeIn().fadeOut(4000);
-			$(".tips_fail").fadeIn().fadeOut(4000);
+			$(".tips_game").fadeIn().fadeOut(3000);
+			$(".tips_fail").fadeIn().fadeOut(3000);
 			$(this).find("img").attr("src","/images/game/grey_ans_bg.png");
 
 		}
