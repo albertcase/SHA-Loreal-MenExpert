@@ -704,11 +704,15 @@ html{
 /* map_area */
 .map_header{
   width:56%; 
-  margin: 10% 0 0 22%;
+  margin: 5% 0 0 22%;
 }
 .rule_con{
   width:90%; 
-  margin: 10% 0 0 5%;
+  margin: 5% 0 0 5%;
+}
+.quick_con{
+  width:90%; 
+  margin: 8% 0 0 5%;
 }
 .map_loading{
   background: url('/images/map/map_loading.png') no-repeat;
@@ -717,7 +721,7 @@ html{
   height:10%;
   position: absolute;
   left:5%;
-  bottom:10%;
+  bottom:5%;
   overflow: hidden;
 }
 .map_bar{
@@ -739,13 +743,13 @@ html{
   z-index:100;
 }
 @keyframes map_ani{
-  0%{ transform:translate(0,0); }
-  50%{ transform:translate(100px,0); }
+  0%{ transform:translate(-100px,0); }
+  50%{ transform:translate(50px,0); }
   100%{ transform:translate(200px,0); }
 }
 @-webkit-keyframes map_ani{
-  0%{ -webkit-transform:translate(0,0); }
-  50%{ -webkit-transform:translate(100px,0); }
+  0%{ -webkit-transform:translate(-100px,0); }
+  50%{ -webkit-transform:translate(50px,0); }
   100%{ -webkit-transform:translate(200px,0); }
 }
 
