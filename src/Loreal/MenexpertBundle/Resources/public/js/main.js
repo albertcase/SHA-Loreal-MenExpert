@@ -5,6 +5,8 @@
 
 		
 	    $(".main .tips").fadeIn(1000);
+	    $(".main_tips").fadeIn(1000);
+	    
 		$(".interaction .circle_ani_green").on("click",function(){
 			$(".interaction .tips").fadeIn();
 			$(".interaction .green_tips").fadeIn();

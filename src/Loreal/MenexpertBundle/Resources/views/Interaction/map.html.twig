@@ -116,17 +116,33 @@
 			<img src="/images/map/yanzu_title.png" width="100%" class="map_header"/>
 			<img src="/images/map/rule.png" width="100%" class="tips_title"/>
 			<img src="/images/map/rule_con.png" width="100%" class="rule_con"/>
-			<img src="/images/map/map_loading.png" width="100%" class="map_loading">
+			<div class="map_loading">
+				<img src="/images/map/map_bar.png" width="100%" class="map_bar" />
+				<p class="map_title">0%</p>
+			</div>
 		</div>	
 	</div>
 
 </div>	
 <script>
 {% if tips == 0 %}
-$(".main .tips").fadeIn(1000);
-$(".main_tips").fadeIn(1000);
 $(".map_area .tips").fadeIn(1000);
 $(".map_tips").fadeIn(1000);
 {% endif %}
+
+
+
+var current = 0;
+
+function increment(){
+	if(current >= 99){
+		clearInterval(interval);
+	}
+	current++;
+	$('.map_title').html(current+'%'); 
+}
+
+var interval = setInterval('increment()',50);
+
 </script>
 {% endblock %}

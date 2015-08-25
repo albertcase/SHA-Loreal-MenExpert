@@ -711,11 +711,44 @@ html{
   margin: 10% 0 0 5%;
 }
 .map_loading{
+  background: url('/images/map/map_loading.png') no-repeat;
+  background-size:100%; 
   width:90%;
+  height:10%;
   position: absolute;
   left:5%;
   bottom:10%;
+  overflow: hidden;
 }
+.map_bar{
+  width:100%;
+  position: relative;
+  margin: 0 0 0 0;
+  animation: map_ani 8s 1 linear;
+  -webkit-animation: map_ani 8s 1 linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+}
+.map_title{
+  color:#ec680c;
+  font-size: 2.2em;
+  font-weight: bold;
+  position: absolute;
+  top:0;
+  right:0;
+  z-index:100;
+}
+@keyframes map_ani{
+  0%{ transform:translate(0,0); }
+  50%{ transform:translate(100px,0); }
+  100%{ transform:translate(200px,0); }
+}
+@-webkit-keyframes map_ani{
+  0%{ -webkit-transform:translate(0,0); }
+  50%{ -webkit-transform:translate(100px,0); }
+  100%{ -webkit-transform:translate(200px,0); }
+}
+
 
 /* game -orange */
 .game{
