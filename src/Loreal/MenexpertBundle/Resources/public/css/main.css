@@ -274,7 +274,7 @@ html{
   100%{background-size: 70% 80%; }
 }
 .huhuan_btn,.photo_btn{
-  width:38%;
+  width:40%;
   background: url("/images/main/bg_btn.png") no-repeat center;
   background-size: 100% auto;
   animation: btn_ani 2s ease-in-out infinite;
