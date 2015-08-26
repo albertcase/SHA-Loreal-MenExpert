@@ -482,8 +482,8 @@ html{
   width:6%;
   position: relative;
   margin: -5% 0 0 -5%;
-  animation: arrow_up 1.2s linear infinite;
-  -webkit-animation: arrow_up 1.2s linear infinite;
+  /*animation: arrow_up 1.2s linear infinite;
+  -webkit-animation: arrow_up 1.2s linear infinite;*/
 }
 @keyframes arrow_up{
   0%{transform:translate(0,0)} 
