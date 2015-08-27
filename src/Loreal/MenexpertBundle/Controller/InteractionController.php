@@ -19,7 +19,7 @@ class InteractionController extends Controller
 
     public function photolistAction()
     {
-        $photos = $this->getDoctrine()->getRepository('LorealMenexpertBundle:Photos')->findAll();
+        $photos = $this->getDoctrine()->getRepository('LorealMenexpertBundle:Photos')->findBy(array(),array('id'=>'desc'));
         return $this->render('LorealMenexpertBundle:Interaction:photolist.html.twig', array('photos' => $photos));
     }
 
